@@ -1,0 +1,47 @@
+{
+  "PROJECT_NAME": {
+    "name": "projectName",
+    "desc": "Project name",
+    "type": "string",
+    "required": true,
+    "prompt": true
+  },
+  "AUTHOR_NAME": {
+    "name": "authorName",
+    "desc": "Author name",
+    "type": "string",
+    "required": true,
+    "prompt": true
+  },
+  "AUTHOR_EMAIL": {
+    "name": "authorEmail",
+    "desc": "Author email",
+    "type": "string",
+    "required": true,
+    "prompt": true
+  },
+  "GITHUB_REPO_URL": {
+    "name": "githubRepoUrl",
+    "desc": "GitHub repository URL",
+    "type": "string",
+    "required": true,
+    "prompt": true
+  },
+  "LICENSE": {
+    "name": "license",
+    "desc": "Project license",
+    "type": "string",
+    "default": "MIT",
+    "prompt": {
+      "type": "list",
+      "choices": []
+    }
+  },
+  "CREATE_LICENSE": {
+    "name": "createLicense",
+    "desc": "Create LICENSE file?",
+    "type": "boolean",
+    "default": true,
+    "prompt": true
+  }
+}

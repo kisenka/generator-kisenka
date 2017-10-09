@@ -1,0 +1,162 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Yeoman Options schema",
+  "type": "object",
+  "patternProperties": {
+    "^[A-Z0-9_]+$": {
+      "$ref": "#/definitions/option"
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "option": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "desc": {
+          "type": "string"
+        },
+        "type": {
+          "enum": ["boolean", "string", "number", "array"],
+          "default": "boolean"
+        },
+        "required": {
+          "type": "boolean",
+          "default": false
+        },
+        "default": {
+          "anyOf": [
+            { "type": "boolean" },
+            { "type": "string" },
+            { "type": "number" },
+            { "type": "array" }
+          ],
+          "default": ""
+        },
+        "alias": {
+          "type": "string"
+        },
+        "prompt": {
+          "oneOf": [
+            { "type": "boolean" },
+            { "$ref": "#/definitions/confirm_prompt" },
+            { "$ref": "#/definitions/input_prompt" },
+            { "$ref": "#/definitions/list_prompt" },
+            { "$ref": "#/definitions/checkbox_prompt" }
+          ]
+        }
+      }
+    },
+    "prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "message": { "type": "string" },
+        "default": {
+          "anyOf": [
+            { "type": "string" },
+            { "type": "number" },
+            { "type": "array" }
+          ]
+        },
+        "store": { "type": "boolean" },
+        "when": { "type": "boolean" }
+      }
+    },
+    "input_prompt": {
+      "$ref": "#/definitions/prompt",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "enum": ["input"],
+          "default": "input"
+        }
+      }
+    },
+    "confirm_prompt": {
+      "$ref": "#/definitions/prompt",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "enum": ["confirm"],
+          "default": "confirm"
+        }
+      }
+    },
+    "list_prompt": {
+      "$ref": "#/definitions/prompt",
+      "required": ["type", "choices"],
+      "properties": {
+        "type": {
+          "enum": ["list"],
+          "default": "list"
+        },
+        "pageSize": {
+          "type": "number",
+          "default": 10
+        },
+        "choices": {
+          "$ref": "#/definitions/choices_array",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              { "$ref": "#/definitions/primitive_choice" },
+              { "$ref": "#/definitions/list_choice" }
+            ]
+          }
+        }
+      }
+    },
+    "checkbox_prompt": {
+      "$ref": "#/definitions/prompt",
+      "required": ["type", "choices"],
+      "properties": {
+        "type": {
+          "enum": ["checkbox"],
+          "default": "checkbox"
+        },
+        "choices": {
+          "$ref": "#/definitions/choices_array",
+          "type": "array",
+          "items": {
+            "oneOf": [
+              { "$ref": "#/definitions/primitive_choice" },
+              { "$ref": "#/definitions/checkbox_choice" }
+            ]
+          }
+        }
+      }
+    },
+    "primitive_choice": {
+      "type": "string"
+    },
+    "list_choice": {
+      "type": "object",
+      "required": ["name", "value"],
+      "properties": {
+        "name": { "type": "string" },
+        "value": { "type": "string" },
+        "short": { "type": "string" }
+      }
+    },
+    "checkbox_choice": {
+      "type": "object",
+      "required": ["name", "value"],
+      "properties": {
+        "name": { "type": "string" },
+        "value": { "type": "string" },
+        "checked": { "type": "boolean" },
+        "disabled": { "type": "boolean" }
+      }
+    },
+    "choices_array": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 0
+    }
+  }
+}

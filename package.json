@@ -1,0 +1,46 @@
+{
+  "name": "generator-kisenka",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "yeoman",
+    "scaffold",
+    "setup",
+    "project scaffolding",
+    "project generator"
+  ],
+  "license": "MIT",
+  "author": "kisenka",
+  "homepage": "https://github.com/kisenka/generator-kisenka#readme",
+  "bugs": "https://github.com/kisenka/generator-kisenka/issues",
+  "repository": "kisenka/generator-kisenka",
+  "main": "index.js",
+  "files": [
+    "generators",
+    "utils",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=6"
+  },
+  "dependencies": {
+    "case": "1.5.3",
+    "chalk": "^2.1.0",
+    "clone": "^2.1.1",
+    "generator-license": "5.1.0",
+    "shelljs": "^0.7.8",
+    "sort-object-keys": "^1.1.2",
+    "yeoman-generator": "1.1.1"
+  },
+  "devDependencies": {
+    "@jetbrains/eslint-config": "2.0.0",
+    "@kisenka/eslint-config": "0.0.1",
+    "automatic-release": "^1.0.5",
+    "eslint": "4.5.0",
+    "yo": "^2.0.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "precommit": "yarn lint"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "UPDATE_TEST_SCRIPT": {
+    "name": "updateTestScript",
+    "desc": "Update \"test\" script by adding `nyc` to the beginning",
+    "type": "boolean",
+    "default": true,
+    "prompt": {
+      "type": "confirm"
+    }
+  },
+  "CODECOV_INTEGRATION": {
+    "name": "codecovIntegration",
+    "desc": "Codecov.io integration (adds \"publish-coverage\" script to package.json)",
+    "type": "boolean",
+    "default": true,
+    "prompt": true
+  }
+}

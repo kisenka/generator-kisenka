@@ -1,0 +1,18 @@
+{
+  "ADD_LINT_SCRIPT": {
+    "name": "addLintScript",
+    "desc": "Add \"lint\" script to package.json",
+    "type": "boolean",
+    "default": true,
+    "prompt": true
+  },
+  "ADD_PRECOMMIT_HOOK": {
+    "name": "addPrecommitHook",
+    "desc": "Add \"precommit\" hook which runs \"lint\" npm script",
+    "type": "boolean",
+    "default": true,
+    "prompt": {
+      "type": "confirm"
+    }
+  }
+}

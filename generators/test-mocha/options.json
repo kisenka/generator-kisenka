@@ -1,0 +1,16 @@
+{
+  "ADD_TEST_SCRIPT": {
+    "name": "addTestScript",
+    "desc": "Add \"test\" script to package.json",
+    "type": "boolean",
+    "default": true,
+    "prompt": true
+  },
+  "COVERAGE": {
+    "name": "coverage",
+    "desc": "Setup code coverage",
+    "type": "boolean",
+    "default": true,
+    "prompt": true
+  }
+}

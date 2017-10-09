@@ -1,0 +1,19 @@
+{
+  "name": "<%= projectName %>",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [<%- keywords %>],
+  "license": "<%= license %>",
+  "author": "<%= authorName %> <<%= authorEmail %>>",
+  "homepage": "<%= githubRepoUrl %>#readme",
+  "bugs": "<%= githubRepoUrl %>/issues",
+  "repository": "<%= githubRepoUrl %>",
+  "main": "index.js",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {},
+  "config": {}
+}

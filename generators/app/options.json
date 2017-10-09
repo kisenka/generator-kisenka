@@ -1,0 +1,64 @@
+{
+  "INIT_REPO": {
+    "name": "initRepo",
+    "desc": "Do you want to initialize empty git repository",
+    "type": "boolean",
+    "prompt": {
+      "type": "confirm"
+    }
+  },
+  "PACKAGE_MANAGER": {
+    "name": "packageManager",
+    "desc": "Package manager",
+    "type": "string",
+    "default": "npm",
+    "prompt": {
+      "type": "list",
+      "choices": [
+        {
+          "name": "NPM",
+          "value": "npm"
+        },
+        {
+          "name": "Yarn",
+          "value": "yarn"
+        }
+      ]
+    }
+  },
+  "FEATURES": {
+    "name": "features",
+    "desc": "Select what to setup",
+    "type": "array",
+    "prompt": {
+      "type": "checkbox",
+      "choices": [
+        {
+          "name": ".editorconfig",
+          "value": "editorconfig",
+          "checked": true
+        },
+        {
+          "name": ".gitignore",
+          "value": "gitignore",
+          "checked": true
+        },
+        {
+          "name": "Eslint preset",
+          "value": "eslint",
+          "checked": true
+        },
+        {
+          "name": "Conventional commits",
+          "value": "conventional-commits",
+          "checked": true
+        },
+        {
+          "name": "Generic testing env (mocha + chai)",
+          "value": "test-mocha",
+          "checked": true
+        }
+      ]
+    }
+  }
+}
