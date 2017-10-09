@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const Generator = require('../../utils/generator');
 
 const opts = require('./options.json');
