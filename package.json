@@ -13,7 +13,10 @@
   "author": "kisenka",
   "homepage": "https://github.com/kisenka/generator-kisenka#readme",
   "bugs": "https://github.com/kisenka/generator-kisenka/issues",
-  "repository": "kisenka/generator-kisenka",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kisenka/generator-kisenka.git"
+  },
   "main": "index.js",
   "files": [
     "generators",
