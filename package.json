@@ -41,6 +41,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "precommit": "yarn lint"
+    "precommit": "yarn lint",
+    "release:ci": "automatic-release"
   }
 }
