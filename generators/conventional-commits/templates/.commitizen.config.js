@@ -40,5 +40,5 @@ module.exports = {
   allowBreakingChanges: ['feat', 'fix'],
   appendBranchNameToCommitMessage: false,
   breakingPrefix: 'BREAKING CHANGE:',
-  footerPrefix: 'ISSUES CLOSED:'
+  footerPrefix: 'Closes'
 };
