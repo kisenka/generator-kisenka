@@ -9,5 +9,5 @@ script:
   - yarn lint
 
 after_success:
-  - .travis.release.sh
+  - ./.travis.release.sh
 #  - yarn upload-coverage
