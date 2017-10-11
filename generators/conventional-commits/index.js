@@ -7,7 +7,7 @@ module.exports = class extends Generator {
       const config = pkg.config || {};
 
       config.commitizen = { path: 'node_modules/cz-customizable' };
-      config['cz-customizable'] = { config: '.cz-config.js' };
+      config['cz-customizable'] = { config: '.commitizen.config.js' };
 
       pkg.scripts.commit = 'git-cz';
       pkg.scripts.commitmsg = 'cz-customizable-ghooks';
