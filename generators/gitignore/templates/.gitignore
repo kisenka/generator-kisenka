@@ -62,3 +62,6 @@ typings/
 
 # OS Stuff
 .DS_Store
+
+# Yeoman saved config
+.yo-rc.json
