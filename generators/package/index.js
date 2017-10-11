@@ -29,7 +29,6 @@ module.exports = class extends Generator {
 
   writing() {
     const { answers } = this;
-    const keywords = `"${ answers.projectName.split('-').join('", "') }"`;
 
     if (answers[opts.CREATE_LICENSE.name] === true) {
       const licenseOptions = {
@@ -43,7 +42,7 @@ module.exports = class extends Generator {
 
     this.renderAndCopyTpl({
       to: 'package.json',
-      context: { ...answers, keywords }
+      context: answers
     });
   }
 };
