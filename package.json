@@ -46,6 +46,6 @@
   "scripts": {
     "lint": "eslint .",
     "precommit": "yarn lint",
-    "release": "standart-version"
+    "release": "standard-version"
   }
 }
