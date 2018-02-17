@@ -1,3 +1,18 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="0.0.3"></a>
+## [0.0.3](https://github.com/kisenka/generator-kisenka/compare/0.0.2...0.0.3) (2018-02-17)
+
+
+### Bug Fixes
+
+* **generator-generator:** eslint ([17eb8d2](https://github.com/kisenka/generator-kisenka/commit/17eb8d2))
+* **generator-generator:** eslint ([4e38a49](https://github.com/kisenka/generator-kisenka/commit/4e38a49))
+
+
+
 # Changelog
 
 Also see the **[release page]( https://github.com/kisenka/generator-kisenka/releases )**.
